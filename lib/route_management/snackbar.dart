@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_sample/route_management/bottom_sheet.dart';
 import 'package:getx_sample/route_management/dialog.dart';
 
 class SnackbarEx extends StatelessWidget {
@@ -39,6 +40,10 @@ class SnackbarEx extends StatelessWidget {
               height: 30,
             ),
             Dialogbox(),
+            SizedBox(
+              height: 50,
+            ),
+            Bottomsheet(),
           ],
         ),
       ),
