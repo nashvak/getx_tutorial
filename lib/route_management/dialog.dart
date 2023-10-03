@@ -20,8 +20,8 @@ class Dialogbox extends StatelessWidget {
               //     Text('dsf'),
               //   ],
               // ),
-              contentPadding: EdgeInsets.all(10),
-              titlePadding: EdgeInsets.all(20),
+              contentPadding: const EdgeInsets.all(10),
+              titlePadding: const EdgeInsets.all(20),
               // textCancel: 'Cancel',  //default style
               // textConfirm: 'Ok',
               // onCancel: () {},
@@ -33,11 +33,11 @@ class Dialogbox extends StatelessWidget {
                   //Navigator.pop(context);
                   Get.back();
                 },
-                child: Text("Ok"),
+                child: const Text("Ok"),
               ),
               //////////while clicking outside the dialog box ,it doesnot pop
               barrierDismissible: false);
         },
-        child: Text('Show dialog'));
+        child: const Text('Show dialog'));
   }
 }

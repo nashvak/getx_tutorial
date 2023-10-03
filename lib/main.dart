@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_sample/route_management/snackbar.dart';
+import 'package:getx_sample/screens/first_scrren.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return const GetMaterialApp(
       //provided by getx library, uses materialapp as its child
       title: 'getx',
-      home: SnackbarEx(),
+      home: FirstScreen(),
     );
   }
 }

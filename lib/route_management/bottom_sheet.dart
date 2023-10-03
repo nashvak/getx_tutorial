@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 class Bottomsheet extends StatelessWidget {
   const Bottomsheet({super.key});
@@ -17,16 +16,16 @@ class Bottomsheet extends StatelessWidget {
               child: Wrap(
                 children: [
                   ListTile(
-                    leading: Icon(Icons.sunny),
-                    title: Text('Light mode'),
+                    leading: const Icon(Icons.sunny),
+                    title: const Text('Light mode'),
                     onTap: () {
                       Get.changeTheme(ThemeData.light());
                       Get.back();
                     },
                   ),
                   ListTile(
-                    leading: Icon(Icons.dark_mode),
-                    title: Text('Dark mode'),
+                    leading: const Icon(Icons.dark_mode),
+                    title: const Text('Dark mode'),
                     onTap: () {
                       Get.changeTheme(ThemeData.dark());
                       Get.back();
@@ -44,6 +43,6 @@ class Bottomsheet extends StatelessWidget {
             //enableDrag: false,// cannot drag
           );
         },
-        child: Text('Show bottom sheet'));
+        child: const Text('Show bottom sheet'));
   }
 }
