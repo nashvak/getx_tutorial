@@ -43,6 +43,6 @@ class Bottomsheet extends StatelessWidget {
             //enableDrag: false,// cannot drag
           );
         },
-        child: const Text('Show bottom sheet'));
+        child: const Text('bottom sheet'));
   }
 }

@@ -38,6 +38,6 @@ class Dialogbox extends StatelessWidget {
               //////////while clicking outside the dialog box ,it doesnot pop
               barrierDismissible: false);
         },
-        child: const Text('Show dialog'));
+        child: const Text(' dialog'));
   }
 }

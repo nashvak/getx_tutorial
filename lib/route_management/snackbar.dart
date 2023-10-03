@@ -9,7 +9,7 @@ class SnackbarEx extends StatelessWidget {
     return ElevatedButton(
       onPressed: () {
         Get.snackbar(
-          'Showing snackbar',
+          'snackbar',
           'Todo added',
           backgroundColor: Colors.red.shade200,
           messageText: const Text('Overriding the above message'),

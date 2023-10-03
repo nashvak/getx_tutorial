@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_sample/screens/third_screen.dart';
+import 'package:getx_sample/widgets/sizedbox.dart';
+
+import '../widgets/button.dart';
 
 class SecodScreen extends StatelessWidget {
   const SecodScreen({super.key});
@@ -13,30 +16,40 @@ class SecodScreen extends StatelessWidget {
         title: const Text("second screen"),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          ElevatedButton(
-            onPressed: () {
+          Button(
+            color: Colors.green,
+            title: 'Get.back',
+            ontap: () {
               Get.back();
             },
-            child: const Text('Back to first screen'),
           ),
-          const SizedBox(
-            height: 20,
-          ),
-          ElevatedButton(
-            onPressed: () async {
-              //Goto third screen but no option to go back to previous screen.
-              //Get.off(ThirdScreen());
-              //Goto to third screen and cancel all the previous screen.
-              // Get.offAll(ThirdScreen());
+          Sizedbox(height: 20, width: null),
+          //Goto third screen but no option to go back to previous screen.
+          Button(
+              color: Colors.green,
+              title: 'Get.off',
+              ontap: () {
+                Get.off(ThirdScreen());
+              }),
+          Sizedbox(height: 20, width: null),
+          //Goto to third screen and cancel all the previous screen.
+          Button(
+              color: Colors.green,
+              title: 'Get.offAll',
+              ontap: () {
+                Get.offAll(ThirdScreen());
+              }),
+          Sizedbox(height: 20, width: null),
+          Button(
+            title: 'pass data',
+            color: Colors.green,
+            ontap: () {
               //passsing arguments
-              //Get.to(ThirdScreen(), arguments: "Hello nashva");
-              var data = await Get.to(ThirdScreen());
-              print(data);
+              Get.to(ThirdScreen(), arguments: "Hello nashva");
+              // var data = await Get.to(ThirdScreen());
+              // print(data);
             },
-            child: const Text('third screen'),
           ),
         ],
       ),
