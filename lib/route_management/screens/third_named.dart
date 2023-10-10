@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../widgets/button.dart';
-import '../widgets/sizedbox.dart';
+import '../../widgets/sizedbox.dart';
 
 class ThirdNamed extends StatelessWidget {
   const ThirdNamed({super.key});
@@ -11,7 +10,7 @@ class ThirdNamed extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Third'),
+        title: const Text(' Third screen'),
       ),
       body: Center(
         child: Column(
@@ -26,7 +25,7 @@ class ThirdNamed extends StatelessWidget {
             Sizedbox(height: 20, width: null),
             const Text("Passing arguments via named route"),
             Sizedbox(height: 20, width: null),
-            Text(" age is ${Get.parameters['name']}"),
+            Text(" Name is ${Get.parameters['name']}"),
           ],
         ),
       ),

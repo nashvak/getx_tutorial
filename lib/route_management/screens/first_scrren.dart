@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:getx_sample/screens/second_screen.dart';
+import 'package:getx_sample/route_management/screens/second_screen.dart';
 import 'package:getx_sample/route_management/snackbar.dart';
+import 'package:getx_sample/state_management/screens/state1.dart';
 import 'package:getx_sample/widgets/button.dart';
 import 'package:getx_sample/widgets/sizedbox.dart';
 
-import '../route_management/bottom_sheet.dart';
-import '../route_management/dialog.dart';
+import '../bottom_sheet.dart';
+import '../dialog.dart';
 
 class FirstScreen extends StatelessWidget {
   const FirstScreen({super.key});
@@ -56,7 +57,14 @@ class FirstScreen extends StatelessWidget {
                   title: "Get.toNamed",
                   ontap: () {
                     Get.toNamed('/namedSecond');
-                  })
+                  }),
+              Sizedbox(height: 30, width: null),
+              Button(
+                  color: Colors.red,
+                  title: "State mngmnt",
+                  ontap: () {
+                    Get.to(StateOne());
+                  }),
             ],
           ),
         ],

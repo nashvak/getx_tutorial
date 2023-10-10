@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_sample/widgets/button.dart';
 
-import '../widgets/sizedbox.dart';
+import '../../widgets/sizedbox.dart';
 
 class ThirdScreen extends StatelessWidget {
   const ThirdScreen({super.key});

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../widgets/button.dart';
-import '../widgets/sizedbox.dart';
+import '../../widgets/button.dart';
+import '../../widgets/sizedbox.dart';
 
 class SecondNamed extends StatelessWidget {
   const SecondNamed({super.key});

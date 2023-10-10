@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_sample/screens/third_screen.dart';
+import 'package:getx_sample/route_management/screens/third_screen.dart';
 import 'package:getx_sample/widgets/sizedbox.dart';
 
-import '../widgets/button.dart';
+import '../../widgets/button.dart';
 
 class SecodScreen extends StatelessWidget {
   const SecodScreen({super.key});
