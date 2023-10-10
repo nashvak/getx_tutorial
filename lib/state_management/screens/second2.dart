@@ -3,9 +3,16 @@ import 'package:get/get.dart';
 
 import '../controller/slider_controller.dart';
 
-class StateSecond extends StatelessWidget {
+class StateSecond extends StatefulWidget {
   StateSecond({super.key});
+
+  @override
+  State<StateSecond> createState() => _StateSecondState();
+}
+
+class _StateSecondState extends State<StateSecond> {
   final SliderController cont = Get.put(SliderController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +43,16 @@ class StateSecond extends StatelessWidget {
                 },
               ),
             ),
-            Obx(() => Text(cont.opacity.toString()))
+            Obx(() => Text(cont.opacity.toString())),
+            SizedBox(
+              height: 20,
+            ),
+            Obx(() => Switch(
+                value: cont.toggle.value,
+                onChanged: (value) {
+                  cont.changeToggle(value);
+                  print(value);
+                }))
           ],
         ),
       ),
