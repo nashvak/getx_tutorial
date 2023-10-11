@@ -34,7 +34,7 @@ class StateOne extends StatelessWidget {
                   StateSecond(),
                 );
               },
-              child: Text('next'))
+              child: Text('next')),
         ],
       ),
       floatingActionButton: FloatingActionButton(onPressed: () {

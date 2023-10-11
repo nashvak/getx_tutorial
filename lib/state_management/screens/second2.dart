@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_sample/state_management/screens/state3.dart';
 
 import '../controller/slider_controller.dart';
 
@@ -17,12 +18,12 @@ class _StateSecondState extends State<StateSecond> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('slider'),
+        title: const Text('slider'),
       ),
       body: Center(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
             Obx(
@@ -32,7 +33,7 @@ class _StateSecondState extends State<StateSecond> {
                 color: Colors.red.withOpacity(cont.opacity.value),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Obx(
@@ -44,15 +45,25 @@ class _StateSecondState extends State<StateSecond> {
               ),
             ),
             Obx(() => Text(cont.opacity.toString())),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Obx(() => Switch(
+            Obx(
+              () => Switch(
                 value: cont.toggle.value,
                 onChanged: (value) {
                   cont.changeToggle(value);
                   print(value);
-                }))
+                },
+              ),
+            ),
+            TextButton(
+                onPressed: () {
+                  Get.to(
+                    const Favourites(),
+                  );
+                },
+                child: const Text('next')),
           ],
         ),
       ),
