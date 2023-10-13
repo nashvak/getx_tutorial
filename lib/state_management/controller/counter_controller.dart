@@ -6,3 +6,11 @@ class CounterController extends GetxController {
     counter.value++;
   }
 }
+
+class GetbuilderController extends GetxController {
+  var count = 0;
+  void increment() {
+    count++;
+    update(); // update the count variable on the ui
+  }
+}

@@ -55,7 +55,7 @@ class StateOne extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Counter screen'),
+        title: const Text('Counter screen'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -67,11 +67,15 @@ class StateOne extends StatelessWidget {
                 return Center(
                   child: Text(
                     controller.counter.toString(),
-                    style: TextStyle(fontSize: 30),
+                    style: const TextStyle(fontSize: 30),
                   ),
                 );
               }),
-          SizedBox(
+          const SizedBox(
+            height: 30,
+          ),
+          const GetbuilderCounter(),
+          const SizedBox(
             height: 30,
           ),
           TextButton(
@@ -80,7 +84,7 @@ class StateOne extends StatelessWidget {
                   StateSecond(),
                 );
               },
-              child: Text('next')),
+              child: const Text('next')),
         ],
       ),
       floatingActionButton: FloatingActionButton(onPressed: () {
@@ -90,6 +94,29 @@ class StateOne extends StatelessWidget {
   }
 }
 
-
-
 //   U S I N G   G E T B U I L D E R
+
+class GetbuilderCounter extends StatelessWidget {
+  const GetbuilderCounter({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        GetBuilder<GetbuilderController>(
+            init: GetbuilderController(),
+            builder: (contol) {
+              return Text(contol.count.toString());
+            }),
+        const SizedBox(
+          height: 20,
+        ),
+        ElevatedButton(
+            onPressed: () {
+              Get.find<GetbuilderController>().increment();
+            },
+            child: const Text('Increment'))
+      ],
+    );
+  }
+}
